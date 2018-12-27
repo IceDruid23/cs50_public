@@ -27,14 +27,14 @@ int main(void)
     //building the pyramid
     for (int i = 0; i < n; i++)
     {
-        for (int j = n + 1; j > 0; j--) //first half of pyramid
+        for (int j = n; j > 0; j--) //first half of pyramid
         {
             j > i + 1 ? printf(" ") : printf("#");
         }
 
         printf("  ");
 
-        for (int j = 0; j < n+1; j++) //second half of pyramid
+        for (int j = 0; j < n; j++) //second half of pyramid
         {
             j < i + 1 ? printf("#") : printf(" ");
         }
