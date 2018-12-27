@@ -4,11 +4,13 @@
 #include <math.h>
 
 
-//program to draw a half pyramid
+//program to calculate change to give
+//INPUT: sum to calculate
+//OUTPUT: the smallest number of coins needed to give change
 int main(void)
 {
-    double n = 0; //max number of blocks
-    char m[20]; // used for integer corectness only
+    double n = 0; //change to give
+    char m[20]; // used for float corectness only
     int quarters = 0;
     int dimes = 0;
     int nickels = 0;
@@ -19,11 +21,10 @@ int main(void)
     {
         printf("Change owned ");
         scanf("%s", m); // read number as string
-        n = atof(m); // convert to integer
+        n = atof(m); // convert to string
 
     }
-    while ((n <= 0) || !(atof(m) != 0) );
-    printf("%f\n", n);
+    while (n <= 0);
 
     int x = 100 * n;
 
