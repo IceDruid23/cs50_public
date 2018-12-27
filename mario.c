@@ -36,7 +36,7 @@ int main(void)
 
         for (int j = 0; j < n; j++) //second half of pyramid
         {
-            j < i + 1 ? printf("#") : printf(" ");
+            if (j < i + 1) printf("#");
         }
 
         printf("\n");
