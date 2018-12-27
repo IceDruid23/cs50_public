@@ -34,14 +34,10 @@ int main(void)
     dimes = (x / 10);
     x = fmod(x, 10);
 
-
-    nickels = (int) ( x / 5);
+    nickels = (x / 5);
     x = fmod(x, 5);
 
-    pennies = (int) ( x / 1 );
-
-
-
+    pennies = (x / 1);
 
     printf("%d\n", quarters + dimes + nickels + pennies);
 }
