@@ -22,7 +22,8 @@ int main(void)
         n = atof(m); // convert to integer
 
     }
-    while ((n <= 0) && !(atof(m) != 0) );
+    while ((n <= 0) || !(atof(m) != 0) );
+    printf("%f\n", n);
 
     int x = 100 * n;
 
