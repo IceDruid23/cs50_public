@@ -30,7 +30,7 @@ int main(void)
     first_two = 10 * (card_string[0] - 48) + (card_string[1] - 48);
     if ((card_string[0] == '4') && (lenStr == 16 || lenStr==13) )
     {
-        sum_check(card_number, "VISA");
+        sum_check(card_number, "VISA\n");
         exit(0);
     }
 
@@ -39,12 +39,12 @@ int main(void)
             case 37:
                 if (lenStr == 15)
                 {
-                sum_check(card_number, "AMEX");
+                sum_check(card_number, "AMEX\n");
                 break;
                 }
                 else
                 {
-                    printf("INVALID");
+                    printf("INVALID\n");
                     break;
                 }
             case 51:
@@ -54,16 +54,16 @@ int main(void)
             case 55:
                 if (lenStr == 16)
                 {
-                sum_check(card_number, "MasterCard");
+                sum_check(card_number, "MasterCard\n");
                 break;
                 }
                 else
                 {
-                    printf("INVALID");
+                    printf("INVALID\n");
                     break;
                 }
             default:
-                printf("INVALID");
+                printf("INVALID\n");
 
     }
 }
@@ -92,7 +92,6 @@ int main(void)
             i++;
 
         }
-        printf("Sum of digits is: %d\n", sum);
 
         if ( sum % 10 == 0)
         {
@@ -100,7 +99,7 @@ int main(void)
         }
         else
         {
-            printf("INVALID");
+            printf("INVALID\n");
         }
     }
 
