@@ -54,7 +54,7 @@ int main(void)
             case 55:
                 if (lenStr == 16)
                 {
-                sum_check(card_number, "MasterCard\n");
+                sum_check(card_number, "MASTERCARD\n");
                 break;
                 }
                 else
