@@ -1,9 +1,16 @@
+//PROGRAM TO CALCULATE THE CHECKSUM FOR A CREDIT CARD NUMBER
+//BASED ON LUHN'S ALGORITHM
+//INPUT: credit card number - digits only
+//OUTPUT:
+//      if valid: credit type card
+//      if not valid print INVALID
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-void sum_check(int long long n, char card_type[10]);
+void sum_check(int long long n, char card_type[10]); //function to calculate checksum
 
 
 int main(void)
@@ -14,7 +21,7 @@ int main(void)
     char card_string[50];
     int nDigit;
     int lenStr;
-
+    //check for input corectness -only digits
     do
     {
         printf("Number:");
@@ -26,7 +33,8 @@ int main(void)
         lenStr = strlen(card_string);
 
     } while ( nDigit != lenStr );
-
+    //compare first two digits of credit type number to figure out
+    //the type of card
     first_two = 10 * (card_string[0] - 48) + (card_string[1] - 48);
     if ((card_string[0] == '4') && (lenStr == 16 || lenStr==13) )
     {
@@ -67,7 +75,7 @@ int main(void)
 
     }
 }
-
+    //the checksum calculus, valid if last digit of the checksum is 0
     void sum_check(int long long n, char card_type[10])
     {
         int x, sum = 0;
@@ -102,6 +110,7 @@ int main(void)
             printf("INVALID\n");
         }
     }
+    //END OF PROGRAM
 
 
 
