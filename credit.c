@@ -20,7 +20,7 @@ int main(void)
         printf("Number:");
         scanf("%s", card_string);
         card_number = atoll(card_string);
-//if (card_number <= 0) continue;
+        if (card_string[0] < '0' || card_string[0] > '9') continue;
 
         nDigit = (int) log10(card_number) +1;
         lenStr = strlen(card_string);
