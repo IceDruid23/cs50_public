@@ -22,39 +22,39 @@ Usage: ./caesar k - k is the number of positions to shift */
 #include <stdlib.h>
 #include <ctype.h>
 
-int main (int argc, char * argv[])
+int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
         printf("Usage: ./caesar k\n");
         exit(1);
     }
-    int k = atoi(argv[1]);
-    int index; //memorize if letter is lower or upper before transforming letter to index
+    int k = atoi(argv[1]); //positions to shift
+    int index; //memorizes if letter is lower or upper before transforming letter to index
     int ascii_char; //indexed value of letter
-    char plain_text[100]={};
-    char cipher_text[100]={};
+    char plain_text[100] = {};
+    char cipher_text[100] = {};
     printf("plaintext: ");
     fgets(plain_text, 100, stdin);
-    for (int i = 0, n =strlen(plain_text); i < n; i++)
+    for (int i = 0, n = strlen(plain_text); i < n; i++)
+    {
+        if (isupper(plain_text[i]))
         {
-            if (isupper(plain_text[i]))
-            {
-                index = 65;
-                ascii_char = (int) plain_text[i] % index;
-                cipher_text[i] = (char) index + (ascii_char + k) % 26;
-            }
-            else if (islower(plain_text[i]))
-            {
-                index = 97;
-                ascii_char = (int) plain_text[i] % index;
-                cipher_text[i] = (char) index + (ascii_char + k) % 26;
-            }
-            else
-            {
-                cipher_text[i] = plain_text[i];
-            }
+            index = 65;
+            ascii_char = (int) plain_text[i] % index;
+            cipher_text[i] = (char) index + (ascii_char + k) % 26;
         }
+        else if (islower(plain_text[i]))
+        {
+            index = 97;
+            ascii_char = (int) plain_text[i] % index;
+            cipher_text[i] = (char) index + (ascii_char + k) % 26;
+        }
+        else
+        {
+            cipher_text[i] = plain_text[i];
+        }
+    }
     printf("ciphertext: %s", cipher_text);
 }
 //END OF PROGRAM
