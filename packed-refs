@@ -1,0 +1,5 @@
+# pack-refs with: peeled fully-peeled sorted 
+233d3c5c085d54371b140893be290728162ccbc4 refs/heads/cs50/2018/x/mario/less
+31f37326c9cb2c82aba0f55fefb0ad5922090f6c refs/heads/master
+b336b370e74a751798976d23464fe02324763634 refs/tags/cs50/2018/x/mario/less@20181225T012956Z
+e3cbe17f6b611f2742b73f7e563eeeb33184be88 refs/tags/cs50/2018/x/mario/less@20181225T013902Z

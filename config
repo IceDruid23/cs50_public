@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/IceDruid23/CS50
+	fetch = +refs/*:refs/*
+	mirror = true
+	pushurl = https://github.com/IceDruid23/CS50
